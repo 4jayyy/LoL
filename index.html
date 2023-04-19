@@ -344,44 +344,5 @@ function on() {
   document.getElementById("overlay").style.display = "block";
 }
 
-
-var audio = document.getElementById("myAudio");
-var btn = document.getElementById("myBtn");
-
-source.setAttribute('src', 'assets/opium.mp3');
-audio.appendChild(source);
-
-audio.pause();
-
-function changeSong(file) {
-  source.setAttribute('src', file);
-  audio.appendChild(source);
-  audio.load();
-  audio.play();
-  document.getElementById("overlay").style.display = "none";
-}
-
-function enterSite() {
-  audio.volume = 0.10;
-	audio.play();
-	x.style.display = "block";
-	y.style.display = "none";
-}
-
-function myFunction() {
-  if (audio.paused) {
-    audio.play();
-    btn.innerHTML = "Pause";
-  } else {
-    audio.pause();
-    btn.innerHTML = "Play";
-  }
-}
-
-function updateSlider(slideAmount) {
-    var sliderDiv = document.getElementById("sliderAmount");
-    audio.volume = (slideAmount / 100);
-    console.log("New volume: " + audio.volume);
-}
     </script>
 <script src="app.js" type="text/javascript"></script></body></html>
